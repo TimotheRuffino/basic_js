@@ -59,4 +59,12 @@ console.log(`5. Supprime le livre avec l'ID: 133712`); {
 }
 
 console.log(`6. Trie les livres par ordre alphabétique`); {
+  for( let sort in books) {
+    books.sort(function(a, b) {
+        if(a.title < b.title) { return -1; }
+        if(a.title > b.title) { return 1; }
+        return 0; } )
+        console.log(books[sort].title);
+    }
+}
 
